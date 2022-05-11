@@ -14,10 +14,11 @@
       <div class="content">
           <div class="pad"></div>
           <div class="buttons">
-              <button>Black</button>
-              <button>Pick a Color</button>
-              <button>Random Color</button>
-              <button>Reset</button>
+              <button onclick="changeColor('black')">Black</button>
+              <button onclick="changeColor('yellow')">Yellow</button>
+              <button onclick="changeColor('random')">Random Color</button>
+              <button onClick="changeColor('white')">Erase</button>
+              <button onclick="resetPad()">Reset</button>
           </div>
           <div>
             <input type="text" placeholder="Pad Size" value="16" onchange="changeSize(this.value)">

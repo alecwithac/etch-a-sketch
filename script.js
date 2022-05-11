@@ -1,3 +1,6 @@
+let color = "black";
+let click = true;
+
 function populateBoard(size) {
 let pad = document.querySelector(".pad");
 let squares = pad.querySelectorAll('div')
@@ -9,9 +12,7 @@ pad.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 let amount = size * size;
 for(let i = 0; i < amount; i++) {
     let square = document.createElement('div');
-    square.addEventListener('mouseover', () => {
-        square.style.backgroundColor="black"} 
-    );
+    square.addEventListener('mouseover', colorSquare);
     square.style.backgroundColor = "white";
     pad.insertAdjacentElement("beforeend", square);
   }
@@ -28,3 +29,32 @@ function changeSize(input) {
     populateBoard(input);
   }
 }
+
+/* function for global backgroud color passed with function */
+function colorSquare() {
+  if(click) {
+  if(color === 'random'){
+    this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+  } else {
+    this.style.backgroundColor = color;
+  }
+}
+}
+
+/* Add this function to different buttons for a color of choice */
+function changeColor(choice) {
+  color = choice;
+}
+
+/* reset the board to white without removing the actual divs */
+function resetPad() {
+  let pad = document.querySelector(".pad");
+  let squares = pad.querySelectorAll('div')
+  squares.forEach((div) => (div.style.backgroundColor = "white"));
+}
+  
+
+/* click to draw on sketch pad */
+document.querySelector("body").addEventListener('click', () => {
+  click = !click;
+}); 
