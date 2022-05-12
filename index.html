@@ -14,17 +14,27 @@
       <div class="content">
           <div class="pad"></div>
           <div class="buttons">
-              <button onclick="changeColor('black')">Black</button>
-              <button onclick="changeColor('yellow')">Yellow</button>
-              <button onclick="changeColor('random')">Random Color</button>
-              <button onClick="changeColor('white')">Erase</button>
-              <button onclick="resetPad()">Reset</button>
+              <button class="black-btn" onclick="changeColor('black')">Black</button>
+              <button class="random-btn" onclick="changeColor('random')">Random Color</button>
+              <div class="prompt">
+                <input type="color" id="color">
+                <p>Choose a Color</p>
+              </div>
+              <button class="erase-btn" onClick="changeColor('white')">Erase</button>
+              <button class="reset-btn" onclick="resetPad()">Reset</button>
           </div>
-          <div>
-            <input type="text" placeholder="Pad Size" value="16" onchange="changeSize(this.value)">
-            <button>Change Size</button>
+          <div class="size">
+            <input type="text" placeholder="2-100" value="16" onchange="changeSize(this.value)">
+            <button class="change-btn">Change Size</button>
           </div>  
+          <div class="instructions">
+            <p>Pick any number between 2-100</p>
+          </div>
       </div>
+  </div>
+
+  <div class="footer">
+    <p>Copyright © 2022 Alec Bolla</p>
   </div>
 
     

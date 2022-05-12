@@ -54,7 +54,8 @@ function resetPad() {
 }
   
 
-/* click to draw on sketch pad */
+/*click to draw on sketch pad*/ 
 document.querySelector("body").addEventListener('click', () => {
   click = !click;
 }); 
+
