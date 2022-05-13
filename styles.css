@@ -48,7 +48,14 @@
     padding: 8px;
 }
 
-    /* choose a color */
+.red-btn {
+    border-radius: 5px;
+    color: black;
+    background-color: red;
+    padding: 8px;
+}
+
+    /* choose a color 
 .prompt {
     display: flex;
     flex-direction: column;
@@ -59,7 +66,7 @@
     border-radius: 5px;
     padding: 8px;
 }
-
+*/
 .prompt p{
     color: rgb(255, 0, 212);
     margin-top: 5px;
@@ -112,4 +119,10 @@
 .footer p {
     font-size: 10px;
     color: white;
+}
+
+.mode {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-decoration: underline;
 }

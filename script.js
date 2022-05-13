@@ -55,7 +55,13 @@ function resetPad() {
   
 
 /*click to draw on sketch pad*/ 
-document.querySelector("body").addEventListener('click', () => {
+document.querySelector("body").addEventListener('click', (e) => {
+ if(e.target.tagName != "BUTTON") {
   click = !click;
+  if(click) {
+    document.querySelector('.mode').textContent = "Pen: Active"
+  } else {
+    document.querySelector('.mode').textContent = "Pen: Not active"
+ }
+  }
 }); 
-
